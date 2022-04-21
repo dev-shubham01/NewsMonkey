@@ -337,7 +337,8 @@ export class News extends Component {
     super();
     this.state = {
       article: this.article,
-      loading:false
+      loading:false,
+      page: 1
     };
   }
   async componentDidMount(){
@@ -367,6 +368,11 @@ export class News extends Component {
             );
           })}
         </div>
+        <div className="container d-flex justify-content-between">
+        <button type="button" class="btn btn-dark">Previous</button>
+        <button type="button" class="btn btn-dark">Next</button>
+        </div>
+       
       </div>
     );
   }
